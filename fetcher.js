@@ -72,7 +72,7 @@ module.exports = {
 			});
 		});
 	  },
-  sendGrade: function(data, res) {
+  sendMessage: function(data) {
   	var twilio = require('twilio');	
 	var client = new twilio.RestClient('', '');//Enter Twilio Credentials
 
@@ -88,7 +88,7 @@ module.exports = {
 	 
 	    console.log('Message sent on:');
 	    console.log(message.dateCreated);
-	    res.send('Message has been sent');
+	    
 	} else {
 	    console.log('Oops! There was an error.');
 	}
