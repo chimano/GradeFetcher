@@ -1,13 +1,14 @@
 
 module.exports = {
   getGrade: function(callback, res) {
-    		var webdriver = require('selenium-webdriver'),
-  								  By = webdriver.By,
-  								  until = webdriver.until;
+    	var webdriver = require('selenium-webdriver'),
+    		By = webdriver.By,
+    		until = webdriver.until;
 
 		var driver = new webdriver.Builder()
-		    .forBrowser('firefox')
+		    .forBrowser('chrome')
 		    .build();
+
 		var username = "";//Write Concordia username here
 		var password = "";//Write Concordia password here
 
