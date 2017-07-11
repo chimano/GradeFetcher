@@ -4,10 +4,11 @@ module.exports = {
     	var webdriver = require('selenium-webdriver'),
     		By = webdriver.By,
     		until = webdriver.until;
+		var chrome = require("selenium-webdriver/chrome");
+		var options = new chrome.Options()
+		options.addArguments("--headless");
 
-		var driver = new webdriver.Builder()
-		    .forBrowser('chrome')
-		    .build();
+		var driver = new webdriver.Builder().withCapabilities(options.toCapabilities()).build();
 
 		var username = "";//Write Concordia username here
 		var password = "";//Write Concordia password here
